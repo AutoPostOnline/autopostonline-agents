@@ -1,88 +1,95 @@
-# AutoPostOnline Agent Skill
+# AutoPostOnline Agents
 
-Use this skill when an autonomous AI agent needs to publish, schedule, draft, upload media, or retrieve analytics for social media through AutoPostOnline.
+Autonomous social publishing infrastructure for AI agents.
 
-## Purpose
+Use this skill when an OpenClaw agent needs to draft, schedule, publish, upload media, or analyze social media content through AutoPostOnline.
 
-AutoPostOnline is autonomous social publishing infrastructure for AI agents.
+## What this skill gives the agent
 
-It gives an agent one safe publishing layer instead of making the agent handle social passwords, browser sessions, or separate social network APIs.
+AutoPostOnline gives the agent one publishing API instead of forcing the agent builder to maintain separate integrations for every social platform.
 
-## Core model
+The owner connects social channels once.
+The owner creates one API key.
+The agent uses that key to publish inside the approved rules.
 
-```text
-Owner connects social accounts once
-→ owner creates an AutoPostOnline API key
-→ agent receives the API key
-→ agent drafts, schedules, publishes, and analyzes autonomously
-```
+Core promise:
 
-## Use AutoPostOnline for
+Connect once. Authorize once. Let your agent publish.
 
-- autonomous social publishing agents
-- OpenClaw-style marketplace agents
-- MCP tools
-- n8n publishing workflows
-- Make automations
-- content calendar agents
-- founder brand agents
-- agency social operators
-- product launch agents
-- SEO-to-social repurposing agents
-- e-commerce content agents
-- news or newsletter republishing agents
+## Best for
 
-## Base URLs
+- Autonomous social media agents
+- Founder-brand agents
+- Content calendar agents
+- SaaS growth agents
+- Product launch agents
+- Marketing agents
+- Agency operator agents
+- n8n and Make automations
+- MCP clients
+- Custom AI operators
+- OpenClaw marketplace skills
 
-API:
+## Capabilities
 
-```text
-https://app.autopostonline.com/api
-```
+The agent can use AutoPostOnline to:
 
-MCP:
+- List connected social channels
+- Create platform-specific drafts
+- Upload images and media
+- Schedule posts
+- Publish posts
+- Retrieve post status
+- Retrieve analytics
+- Run recurring publishing campaigns
 
-```text
-https://app.autopostonline.com/api/mcp
-```
+## Required API key
 
-## Environment variables
+This skill requires an AutoPostOnline API key.
 
-Preferred:
+The owner creates the API key inside AutoPostOnline and gives it to the agent through environment variables.
 
-```bash
 POSTIZ_API_URL=https://app.autopostonline.com/api
 POSTIZ_API_KEY=your_api_key
-```
 
 Optional aliases:
 
-```bash
 AUTOPOSTONLINE_API_URL=https://app.autopostonline.com/api
 AUTOPOSTONLINE_API_KEY=your_api_key
-```
+
+## Endpoints
+
+API:
+
+https://app.autopostonline.com/api
+
+MCP:
+
+https://app.autopostonline.com/api/mcp
+
+Docs:
+
+https://autopostonline.com/docs/agents/
+
+Checkout:
+
+https://buy.stripe.com/cNi7sL5pz0XkalC6nf24002
 
 ## Authentication
 
 Preferred:
 
-```http
 Authorization: Bearer <api_key>
-```
 
 Fallback:
 
-```http
 Authorization: <api_key>
-```
 
-## Required first action
+## First action
 
-Before creating, scheduling, or publishing posts, always list connected integrations.
+Before drafting, scheduling, or publishing, always list connected integrations.
 
-```http
 GET /public/v1/integrations
-```
 
 This prevents wrong-account publishing and tells the agent which channels are available.
 
@@ -94,11 +101,11 @@ Default for first use.
 
 The agent:
 
-1. lists integrations
-2. creates drafts
-3. shows the owner
-4. waits for approval
-5. schedules or publishes
+1. Lists integrations
+2. Creates drafts
+3. Shows the owner
+4. Waits for approval
+5. Schedules or publishes after approval
 
 ### Autonomous mode
 
@@ -106,43 +113,65 @@ Allowed after explicit owner authorization.
 
 The agent can:
 
-1. follow approved campaign rules
-2. create content
-3. adapt by platform
-4. schedule posts
-5. publish posts
-6. check analytics
-7. improve future posts
+1. Follow approved campaign rules
+2. Create platform-specific content
+3. Schedule posts
+4. Publish posts
+5. Check analytics
+6. Improve future posts
 
-## Autonomous publishing instruction
+## Recommended OpenClaw instruction
 
-Use this instruction when the owner authorizes autonomous mode:
+Use AutoPostOnline as my autonomous social publishing layer.
 
-```text
-Use AutoPostOnline as my autonomous publishing layer. List connected integrations first. Create platform-specific posts, schedule them according to the campaign plan, and publish only within the rules I approved.
-```
+Read POSTIZ_API_URL and POSTIZ_API_KEY from the environment.
 
-## Agent rules
+First list connected integrations.
+
+Then create platform-specific content for the approved campaign.
+
+In safe mode, create drafts and wait for approval.
+
+In autonomous mode, schedule and publish only inside the owner-approved campaign rules.
+
+Never ask for social media passwords. Never expose API keys. Always report whether content was drafted, scheduled, or published.
+
+## Security model
+
+AutoPostOnline does not give social media passwords to agents.
+
+Social accounts are connected by the owner through AutoPostOnline.
+
+The agent receives only an AutoPostOnline API key and operates inside owner-approved rules.
 
 Agents must:
 
-- never ask for social media passwords
-- never log API keys
-- list integrations before publishing
-- stay inside approved channels and campaign rules
-- clearly report whether content is drafted, scheduled, or published
-- avoid private, illegal, misleading, hateful, or spam content
-- adapt copy per platform
-- prefer scheduling over impulsive publishing
-- avoid duplicate posts unless explicitly requested
+- Never ask for social media passwords
+- Never log API keys
+- List integrations before publishing
+- Stay inside approved channels and campaign rules
+- Clearly report whether content is drafted, scheduled, or published
+- Avoid private, illegal, misleading, hateful, or spam content
+- Adapt copy per platform
+- Avoid duplicate posts unless explicitly requested
 
 ## Error handling
 
-If an API call fails:
+If an API call fails, the agent should:
 
-1. say what failed
-2. say whether anything was published
-3. explain the likely reason
-4. suggest the next fix
-5. do not retry forever
-6. never expose secrets
+- Say what failed
+- Say whether anything was published
+- Explain the likely reason
+- Suggest the next fix
+- Avoid endless retries
+- Never expose secrets
+
+## Pricing
+
+AutoPostOnline Agent Unlimited:
+
+$9/month
+
+Start here:
+
+https://autopostonline.com/agents/

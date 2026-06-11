@@ -2,7 +2,7 @@
   "name": "autopostonline-agents",
   "displayName": "AutoPostOnline Agents",
   "slug": "autopostonline-agents",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "owner": "AutoPostOnline",
   "license": "MIT",
   "description": "Autonomous social publishing infrastructure for AI agents.",
