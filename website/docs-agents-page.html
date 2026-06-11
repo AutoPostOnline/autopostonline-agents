@@ -1,0 +1,49 @@
+<section style="max-width:900px;margin:0 auto;padding:56px 24px;font-family:Inter,Arial,sans-serif;color:#111827;">
+  <h1>AutoPostOnline Agent Docs</h1>
+
+  <p style="font-size:19px;line-height:1.7;color:#374151;">
+    AutoPostOnline is a smart, cheap, convenient social publishing layer for AI agents. Users connect social accounts in the dashboard. Agents publish through AutoPostOnline using an API key.
+  </p>
+
+  <h2>Endpoints</h2>
+  <pre><code>App:
+https://app.autopostonline.com
+
+API:
+https://app.autopostonline.com/api
+
+MCP:
+https://app.autopostonline.com/api/mcp</code></pre>
+
+  <h2>Environment</h2>
+  <pre><code>POSTIZ_API_URL=https://app.autopostonline.com/api
+POSTIZ_API_KEY=your_api_key</code></pre>
+
+  <h2>Authentication</h2>
+  <p>Preferred:</p>
+  <pre><code>Authorization: Bearer your_api_key</code></pre>
+  <p>Fallback:</p>
+  <pre><code>Authorization: your_api_key</code></pre>
+
+  <h2>First API test</h2>
+  <pre><code>curl -sS \
+  -H "Authorization: Bearer $POSTIZ_API_KEY" \
+  "$POSTIZ_API_URL/public/v1/integrations"</code></pre>
+
+  <h2>Recommended agent behavior</h2>
+  <ol>
+    <li>List integrations before creating content.</li>
+    <li>Create drafts before publishing.</li>
+    <li>Ask approval before live publishing unless autonomous publishing was explicitly requested.</li>
+    <li>Adapt copy per platform.</li>
+    <li>Schedule campaigns when possible.</li>
+    <li>Read analytics after publishing.</li>
+  </ol>
+
+  <h2>Pricing</h2>
+  <p><strong>Agent Unlimited: $9/month.</strong></p>
+  <p>Built for agent builders who need reliable social publishing without high cost or complex setup.</p>
+
+  <h2>GitHub</h2>
+  <p><a href="https://github.com/AutoPostOnline/autopostonline-agents">https://github.com/AutoPostOnline/autopostonline-agents</a></p>
+</section>

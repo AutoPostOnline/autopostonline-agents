@@ -1,0 +1,18 @@
+Create these website pages:
+
+1. /agents
+Paste this file into a Custom HTML block:
+website/agents-page.html
+
+2. /docs/agents
+Paste this file into a Custom HTML block:
+website/docs-agents-page.html
+
+3. /agents/thank-you
+Paste this file into a Custom HTML block:
+website/thank-you-page.html
+
+Optional:
+
+4. /llms.txt
+Publish llms.txt as a plain text page or root file.
