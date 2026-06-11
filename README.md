@@ -2,13 +2,27 @@
 
 **Autonomous social publishing infrastructure for AI agents.**
 
-AutoPostOnline gives autonomous agents one safe publishing layer for drafts, scheduling, media uploads, publishing, and analytics.
+## Install in OpenClaw
 
-The owner connects social channels once. The agent receives one AutoPostOnline API key. Then the agent can run social publishing workflows autonomously inside the rules approved by the owner.
+openclaw skills install autopostonline-agents
 
-```text
+## Quick links
+
+ClawHub:
+https://clawhub.ai/autopostonline/autopostonline-agents
+
+Website:
+https://autopostonline.com/agents/
+
+Docs:
+https://autopostonline.com/docs/agents/
+
+Checkout:
+https://buy.stripe.com/cNi7sL5pz0XkalC6nf24002
+
+## Core promise
+
 Connect once. Authorize once. Let your agent publish.
-```
 
 ## Why this exists
 
