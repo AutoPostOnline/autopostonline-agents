@@ -29,6 +29,6 @@ git push
 
 ## Website
 
-Create `/agents` in WordPress and paste `website/agents-page.html` into a Custom HTML block. Replace `YOUR_STRIPE_PAYMENT_LINK`.
+Create `/agents` in WordPress and paste `website/agents-page.html` into a Custom HTML block. Replace `https://buy.stripe.com/cNi7sL5pz0XkalC6nf24002`.
 
 Create `/docs/agents` and paste `website/docs-agents-page.md` or host the Markdown docs in your documentation system.
