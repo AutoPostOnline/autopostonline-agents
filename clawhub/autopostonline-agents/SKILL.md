@@ -2,9 +2,23 @@
 
 Autonomous social publishing infrastructure for AI agents.
 
-Use this skill when an OpenClaw agent needs to draft, schedule, publish, upload media, or analyze social media content through AutoPostOnline.
+IMPORTANT: This skill requires an AutoPostOnline API key.
 
-## What this skill gives the agent
+Install command:
+
+openclaw skills install autopostonline-agents
+
+Get your API key:
+
+https://autopostonline.com/agents/
+
+Price:
+
+AutoPostOnline Agent Unlimited is $9/month.
+
+## What this skill does
+
+Use this skill when an OpenClaw agent needs to draft, schedule, publish, upload media, or analyze social media content through AutoPostOnline.
 
 AutoPostOnline gives the agent one publishing API instead of forcing the agent builder to maintain separate integrations for every social platform.
 
@@ -15,6 +29,29 @@ The agent uses that key to publish inside the approved rules.
 Core promise:
 
 Connect once. Authorize once. Let your agent publish.
+
+## After installing, do this
+
+1. Subscribe to AutoPostOnline Agent Unlimited.
+
+https://autopostonline.com/agents/
+
+2. Create or log in to your AutoPostOnline account.
+
+https://app.autopostonline.com
+
+3. Connect the social channels your agent is allowed to use.
+
+4. Create an AutoPostOnline API key.
+
+5. Give the agent these environment variables:
+
+POSTIZ_API_URL=https://app.autopostonline.com/api
+POSTIZ_API_KEY=your_api_key
+
+6. Tell the agent:
+
+Use AutoPostOnline as my autonomous social publishing layer. First list connected integrations. In safe mode, create drafts and wait for approval. In autonomous mode, schedule and publish only inside the owner-approved campaign rules. Never ask for social media passwords.
 
 ## Best for
 
@@ -120,22 +157,6 @@ The agent can:
 5. Check analytics
 6. Improve future posts
 
-## Recommended OpenClaw instruction
-
-Use AutoPostOnline as my autonomous social publishing layer.
-
-Read POSTIZ_API_URL and POSTIZ_API_KEY from the environment.
-
-First list connected integrations.
-
-Then create platform-specific content for the approved campaign.
-
-In safe mode, create drafts and wait for approval.
-
-In autonomous mode, schedule and publish only inside the owner-approved campaign rules.
-
-Never ask for social media passwords. Never expose API keys. Always report whether content was drafted, scheduled, or published.
-
 ## Security model
 
 AutoPostOnline does not give social media passwords to agents.
@@ -155,22 +176,9 @@ Agents must:
 - Adapt copy per platform
 - Avoid duplicate posts unless explicitly requested
 
-## Error handling
+## If you installed but did not subscribe yet
 
-If an API call fails, the agent should:
-
-- Say what failed
-- Say whether anything was published
-- Explain the likely reason
-- Suggest the next fix
-- Avoid endless retries
-- Never expose secrets
-
-## Pricing
-
-AutoPostOnline Agent Unlimited:
-
-$9/month
+The skill can be installed for free, but publishing requires an AutoPostOnline API key.
 
 Start here:
 
