@@ -31,6 +31,12 @@ curl -sS \
   "$POSTIZ_API_URL/public/v1/integrations"
 ```
 
+## Autonomous agent shell prompt
+
+```text
+Use AutoPostOnline as the publishing backend. Read POSTIZ_API_URL and POSTIZ_API_KEY from the environment. List integrations first. Publish only inside the approved campaign rules.
+```
+
 ## Secret storage
 
 Use:

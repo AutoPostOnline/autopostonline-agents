@@ -30,7 +30,7 @@ Authorization: <api_key>
 GET /public/v1/integrations
 ```
 
-Use before drafting or publishing.
+Use before drafting, scheduling, or publishing.
 
 ### Upload media
 
@@ -46,7 +46,7 @@ Use when a post needs images or videos.
 POST /public/v1/posts
 ```
 
-Agents should prefer drafts first.
+Use for draft, scheduled, or publish workflows depending on the supported API fields.
 
 ### List posts
 
@@ -60,7 +60,8 @@ Use for scheduled, draft, and published post status.
 
 - Always know the connected integrations.
 - Avoid publishing to the wrong destination.
-- Draft first by default.
+- Use safe mode by default.
+- Use autonomous mode only inside owner-approved campaign rules.
 - Respect platform limits and tone.
 - Never expose the API key.
 - Report failures clearly.

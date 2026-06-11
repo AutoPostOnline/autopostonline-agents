@@ -1,25 +1,36 @@
 # AutoPostOnline Agent Skill
 
-Use this skill when an AI agent needs to publish, schedule, draft, upload media, or retrieve analytics for social media through AutoPostOnline.
+Use this skill when an autonomous AI agent needs to publish, schedule, draft, upload media, or retrieve analytics for social media through AutoPostOnline.
 
-## Positioning
+## Purpose
 
-AutoPostOnline is the smart, cheap, convenient publishing layer for AI agents.
+AutoPostOnline is autonomous social publishing infrastructure for AI agents.
 
-Agents are good at strategy, writing, repurposing, scheduling, and optimization. They should not handle social passwords or unstable browser sessions. AutoPostOnline gives agents a clean publishing interface.
+It gives an agent one safe publishing layer instead of making the agent handle social passwords, browser sessions, or separate social network APIs.
+
+## Core model
+
+```text
+Owner connects social accounts once
+→ owner creates an AutoPostOnline API key
+→ agent receives the API key
+→ agent drafts, schedules, publishes, and analyzes autonomously
+```
 
 ## Use AutoPostOnline for
 
-- Listing connected social accounts
-- Creating drafts
-- Uploading media
-- Scheduling posts
-- Publishing approved posts
-- Retrieving analytics
-- Running content calendars
-- Repurposing blog, news, or product content into social posts
-- Managing founder-brand or agency campaigns
-- Building n8n, Make, Claude, ChatGPT, OpenClaw, or custom agent workflows
+- autonomous social publishing agents
+- OpenClaw-style marketplace agents
+- MCP tools
+- n8n publishing workflows
+- Make automations
+- content calendar agents
+- founder brand agents
+- agency social operators
+- product launch agents
+- SEO-to-social repurposing agents
+- e-commerce content agents
+- news or newsletter republishing agents
 
 ## Base URLs
 
@@ -65,67 +76,73 @@ Fallback:
 Authorization: <api_key>
 ```
 
-## First action
+## Required first action
 
-Before creating or publishing posts, always list integrations.
+Before creating, scheduling, or publishing posts, always list connected integrations.
 
 ```http
 GET /public/v1/integrations
 ```
 
-This prevents the agent from publishing to the wrong account or assuming unsupported channels.
+This prevents wrong-account publishing and tells the agent which channels are available.
 
-## Safe publishing policy
+## Operating modes
 
-Default mode:
+### Safe mode
 
-1. Create drafts first.
-2. Show the final copy.
-3. Ask for approval.
-4. Schedule or publish only after approval.
+Default for first use.
 
-Autonomous mode is allowed only when the user clearly authorizes it.
+The agent:
+
+1. lists integrations
+2. creates drafts
+3. shows the owner
+4. waits for approval
+5. schedules or publishes
+
+### Autonomous mode
+
+Allowed after explicit owner authorization.
+
+The agent can:
+
+1. follow approved campaign rules
+2. create content
+3. adapt by platform
+4. schedule posts
+5. publish posts
+6. check analytics
+7. improve future posts
+
+## Autonomous publishing instruction
+
+Use this instruction when the owner authorizes autonomous mode:
+
+```text
+Use AutoPostOnline as my autonomous publishing layer. List connected integrations first. Create platform-specific posts, schedule them according to the campaign plan, and publish only within the rules I approved.
+```
 
 ## Agent rules
 
 Agents must:
 
-- Never ask for social media passwords
-- Never expose API keys in logs
-- Never publish private information
-- Never invent facts
-- Never spam repeated content
-- Adapt copy per platform
-- Confirm destination channels
-- Prefer scheduling over instant publishing
-- Report clearly whether anything was published
-
-## Recommended workflow
-
-1. Understand the campaign goal.
-2. List connected integrations.
-3. Select target channels.
-4. Draft platform-specific content.
-5. Upload media if needed.
-6. Create drafts.
-7. Ask for review unless autonomous mode is enabled.
-8. Schedule or publish.
-9. Return final status.
-10. Check analytics later.
-
-## Best first prompt
-
-```text
-Use AutoPostOnline. List my connected integrations first. Then create platform-specific drafts for LinkedIn and Instagram. Do not publish until I approve.
-```
+- never ask for social media passwords
+- never log API keys
+- list integrations before publishing
+- stay inside approved channels and campaign rules
+- clearly report whether content is drafted, scheduled, or published
+- avoid private, illegal, misleading, hateful, or spam content
+- adapt copy per platform
+- prefer scheduling over impulsive publishing
+- avoid duplicate posts unless explicitly requested
 
 ## Error handling
 
 If an API call fails:
 
-1. Say what failed.
-2. Say whether anything was published.
-3. Explain the likely reason.
-4. Suggest the next fix.
-5. Do not retry endlessly.
-6. Never leak secrets.
+1. say what failed
+2. say whether anything was published
+3. explain the likely reason
+4. suggest the next fix
+5. do not retry forever
+6. never expose secrets

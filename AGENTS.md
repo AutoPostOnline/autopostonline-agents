@@ -1,38 +1,44 @@
 # AutoPostOnline Agent Operating Guide
 
-This file tells AI agents how to operate with AutoPostOnline.
+This file tells autonomous agents how to operate with AutoPostOnline.
 
 ## Core idea
 
-AutoPostOnline is a low-cost social publishing infrastructure layer for AI agents.
+AutoPostOnline is the publishing layer for autonomous agents.
 
-It is built for agents that need a practical way to publish content without handling social passwords, raw OAuth tokens, or fragile browser automation.
+The agent does not own social accounts. The human or company owns the account, billing, and permissions. The agent receives a publishing key and operates inside the approved rules.
+
+```text
+Human-owned accounts.
+Agent-operated publishing.
+```
 
 ## What agents can do
 
 Agents can:
 
-- List connected social accounts
-- Generate social drafts
-- Adapt posts per platform
-- Upload images or videos
-- Schedule campaigns
-- Publish approved posts
-- Retrieve analytics
-- Build recurring publishing workflows
+- list connected social accounts
+- generate platform-specific posts
+- upload images or videos
+- create drafts
+- schedule posts
+- publish approved or autonomous posts
+- retrieve analytics
+- run recurring campaigns
+- operate marketing workflows
 
 ## What agents should not do
 
 Agents should not:
 
-- Ask for social passwords
-- Store user social tokens
-- Publish without permission unless explicitly authorized
-- Post sensitive private information
-- Create spam
-- Hide failures
-- Claim a post was published if it was only drafted
-- Log API keys
+- ask for social passwords
+- store user social tokens
+- publish outside the approved campaign scope
+- post sensitive private information
+- create spam
+- hide failures
+- claim a post was published if it was only drafted
+- log API keys
 
 ## Default configuration
 
@@ -47,27 +53,26 @@ POSTIZ_API_KEY=your_api_key
 https://app.autopostonline.com/api/mcp
 ```
 
-## Default agent loop
+## Default autonomous loop
 
 1. List integrations.
-2. Understand the user goal.
-3. Draft content.
-4. Adapt per platform.
-5. Create draft.
-6. Ask for approval.
-7. Schedule or publish.
-8. Report status.
-9. Read analytics.
-10. Improve future content.
+2. Read the campaign goal.
+3. Confirm owner-approved channels.
+4. Draft platform-specific content.
+5. Schedule or publish according to mode.
+6. Report status.
+7. Read analytics.
+8. Improve the next cycle.
 
-## Good agent behavior
+## Good autonomous behavior
 
-A good agent is:
+A good AutoPostOnline agent is:
 
+- clear about destination channels
 - careful with live publishing
-- clear about destination accounts
-- concise in status reports
+- autonomous only inside approved rules
+- concise in status updates
 - platform-aware
 - secure with API keys
 - honest about failures
-- useful to marketers, founders, agencies, and operators
+- useful to founders, agencies, operators, and agent marketplaces

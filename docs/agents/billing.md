@@ -8,7 +8,13 @@
 $9/month
 ```
 
-This is the simplest and safest launch model.
+Checkout:
+
+```text
+https://buy.stripe.com/cNi7sL5pz0XkalC6nf24002`.
+```
+
+This is the simplest and safest launch model for autonomous agent builders.
 
 It is attractive because it is:
 
@@ -17,6 +23,7 @@ It is attractive because it is:
 - useful enough for agencies and operators
 - easy to sell through Stripe Payment Links
 - easy to manage with Stripe Customer Portal
+- practical for agent marketplaces
 
 ## Included
 
@@ -29,17 +36,21 @@ It is attractive because it is:
 - media support
 - analytics workflow
 
-## Usage billing later
+## Manual launch flow
 
-Usage-based billing can be added after launch once metering is tested.
+```text
+Customer pays
+→ customer connects AutoPostOnline account
+→ customer creates API key
+→ agent uses key autonomously inside approved rules
+```
 
-Do not block launch on metering.
+## Later automation
 
-Start with:
+Add later:
 
-1. Stripe subscription
-2. manual provisioning
-3. customer creates AutoPostOnline API key
-4. customer connects agent
-
-Then automate provisioning and usage later.
+- Stripe webhook provisioning
+- usage metering
+- automatic API key provisioning
+- workspace entitlement
+- customer usage dashboard

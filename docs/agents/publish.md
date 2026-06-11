@@ -1,10 +1,35 @@
 # Publishing Workflow
 
-## Recommended flow
+AutoPostOnline supports both safe and autonomous publishing workflows.
+
+## Safe mode
 
 ```text
 Plan → Draft → Review → Schedule → Publish → Analyze
 ```
+
+Use safe mode for:
+
+- new accounts
+- sensitive brands
+- regulated content
+- first campaign tests
+- human-reviewed marketing workflows
+
+## Autonomous mode
+
+```text
+Plan → Draft → Schedule → Publish → Analyze → Improve
+```
+
+Use autonomous mode when the owner has approved:
+
+- target channels
+- campaign topic
+- brand voice
+- posting frequency
+- restricted topics
+- approval boundaries
 
 ## Step 1: List integrations
 
@@ -21,28 +46,20 @@ Recommended style:
 - YouTube: title and description oriented
 - Facebook: conversational and clear
 
-## Step 3: Draft
+## Step 3: Schedule
 
-Drafting first protects the user and builds trust.
+Scheduling is preferred for autonomous workflows because it creates a predictable campaign timeline.
 
-## Step 4: Schedule
+## Step 4: Publish
 
-Scheduling is better than impulsive publishing.
+Publish only within owner-approved rules.
 
 ## Step 5: Analyze
 
 After publishing, check analytics and improve the next post.
 
-## Agent publishing prompt
-
-```text
-Create platform-specific drafts for my connected channels. Do not publish until I approve. Optimize each version for the platform and explain the differences.
-```
-
 ## Autonomous publishing prompt
 
-Only use this when the user clearly wants autonomous publishing:
-
 ```text
-You are authorized to publish through AutoPostOnline for this campaign. Stay within the approved topic, use the connected channels, and schedule posts at the agreed times.
+You are authorized to publish through AutoPostOnline for this campaign. Stay within the approved topic, use the connected channels, schedule posts at the agreed times, and report what was published.
 ```

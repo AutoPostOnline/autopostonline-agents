@@ -1,29 +1,42 @@
 # AutoPostOnline Agent Documentation
 
-AutoPostOnline gives AI agents a practical, safe, low-cost way to publish to social media.
+AutoPostOnline is autonomous social publishing infrastructure for AI agents.
 
-Instead of giving agents social passwords or relying on fragile browser automation, users connect their accounts once inside AutoPostOnline. Agents then publish through AutoPostOnline using an API key.
+The owner connects social channels once, creates one API key, and gives the key to an agent. The agent can then draft, schedule, publish, and analyze content through AutoPostOnline.
 
-## Why this is useful
+## Core idea
 
-Agents can write content, repurpose long-form material, build campaigns, and learn from analytics. What they need is a dependable publishing layer.
+```text
+One-time owner setup
+→ connected social channels
+→ one AutoPostOnline API key
+→ autonomous agent publishing
+```
 
-AutoPostOnline provides:
+## Why agents use it
 
-- Connected social channels
-- Draft workflow
-- Scheduling
-- Media uploads
-- Publishing
-- Analytics
-- API key access
-- MCP-compatible endpoint
-- CLI-friendly setup
+Agents need a safe publishing layer.
+
+Without AutoPostOnline, an agent builder must handle:
+
+- social OAuth
+- many platform APIs
+- browser automation
+- token storage
+- scheduling logic
+- media uploads
+- publishing state
+- analytics retrieval
+
+AutoPostOnline gives the agent one practical interface.
 
 ## Endpoints
 
 ```text
-API base:
+App:
+https://app.autopostonline.com
+
+API:
 https://app.autopostonline.com/api
 
 MCP:
@@ -37,6 +50,20 @@ POSTIZ_API_URL=https://app.autopostonline.com/api
 POSTIZ_API_KEY=your_api_key
 ```
 
+## Authentication
+
+Preferred:
+
+```http
+Authorization: Bearer your_api_key
+```
+
+Fallback:
+
+```http
+Authorization: your_api_key
+```
+
 ## First API test
 
 ```bash
@@ -45,20 +72,41 @@ curl -sS \
   "$POSTIZ_API_URL/public/v1/integrations"
 ```
 
-## Recommended workflow
+## Operating modes
+
+### Safe mode
+
+The agent creates drafts and waits for approval.
+
+### Autonomous mode
+
+The owner explicitly authorizes the agent to publish within approved campaign rules.
+
+The agent can then:
+
+- create posts
+- schedule posts
+- publish posts
+- retrieve analytics
+- improve future posts
+
+## Recommended autonomous agent instruction
 
 ```text
-Goal → list integrations → draft → review → schedule → publish → analytics → improve
+Use AutoPostOnline as my autonomous publishing layer. List connected integrations first. Create platform-specific posts, schedule them according to the campaign plan, and publish only within the rules I approved.
 ```
 
-## Good first instruction
+## Rules for agents
 
-```text
-Use AutoPostOnline. List my connected integrations first. Create platform-specific drafts. Do not publish until I approve.
-```
+- list integrations before publishing
+- never ask for social media passwords
+- use the AutoPostOnline API key from environment variables
+- stay within owner-approved channels and campaign rules
+- report whether content is drafted, scheduled, or published
+- do not publish private, misleading, illegal, or spam content
 
 ## Pricing
 
-Agent Unlimited is $9/month.
+**Agent Unlimited: $9/month**
 
-It is designed to be cheap enough for solo founders and practical enough for agencies, automations, and agent builders.
+Built as a cheap, convenient publishing backend for autonomous agents, agent marketplaces, OpenClaw-style workflows, n8n automations, and custom AI operators.

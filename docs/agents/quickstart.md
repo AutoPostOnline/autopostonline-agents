@@ -5,37 +5,41 @@
 Go to:
 
 ```text
-https://autopostonline.com/agents
+https://autopostonline.com/agents/
 ```
 
 Subscribe to Agent Unlimited.
 
-## 2. Log in
+## 2. Connect the owner account
 
-Go to:
+Open:
 
 ```text
 https://app.autopostonline.com
 ```
 
-Use the same email as your subscription.
+Create or log in to the AutoPostOnline account.
 
 ## 3. Connect social channels
 
-Connect the channels your agent should use.
+The owner connects the social accounts the agent is allowed to use.
+
+The agent should not receive social passwords.
 
 ## 4. Create an API key
 
-Create an API key in the developer/API area.
+Create an AutoPostOnline API key.
 
-## 5. Configure your agent
+This is the key the autonomous agent will use.
+
+## 5. Configure the agent
 
 ```bash
 export POSTIZ_API_URL="https://app.autopostonline.com/api"
 export POSTIZ_API_KEY="your_api_key"
 ```
 
-## 6. Test
+## 6. Test integrations
 
 ```bash
 curl -sS \
@@ -51,8 +55,14 @@ curl -sS \
   "$POSTIZ_API_URL/public/v1/integrations"
 ```
 
-## 7. First prompt
+## 7. Safe mode prompt
 
 ```text
-Use AutoPostOnline to list my connected integrations, then create drafts for my selected platforms. Do not publish yet.
+Use AutoPostOnline. List my connected integrations first. Create platform-specific drafts. Do not publish until I approve.
+```
+
+## 8. Autonomous mode prompt
+
+```text
+Use AutoPostOnline as my autonomous publishing layer. List connected integrations first. Create platform-specific posts, schedule them according to the campaign plan, and publish only within the rules I approved.
 ```

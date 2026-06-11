@@ -1,27 +1,72 @@
 # AutoPostOnline Agents
 
-**Smart, cheap, convenient social publishing infrastructure for AI agents.**
+**Autonomous social publishing infrastructure for AI agents.**
 
-AutoPostOnline Agents gives AI agents a reliable way to create drafts, upload media, schedule posts, publish campaigns, and retrieve analytics through AutoPostOnline.
+AutoPostOnline gives autonomous agents one safe publishing layer for drafts, scheduling, media uploads, publishing, and analytics.
 
-Instead of giving an agent social passwords, browser sessions, or raw platform tokens, a human connects social accounts once inside AutoPostOnline. The agent then works safely through an API key.
+The owner connects social channels once. The agent receives one AutoPostOnline API key. Then the agent can run social publishing workflows autonomously inside the rules approved by the owner.
 
-## Why agents use AutoPostOnline
+```text
+Connect once. Authorize once. Let your agent publish.
+```
 
-Agents need infrastructure, not hacks.
+## Why this exists
 
-AutoPostOnline gives agents:
+Autonomous agents need social publishing infrastructure.
 
-- One API for social publishing
-- One dashboard for connected social channels
-- Drafts, scheduling, media, publishing, and analytics in one place
-- Postiz-compatible API behavior
-- MCP-friendly endpoint
-- CLI-ready configuration
-- Human-controlled social account connections
-- No social passwords inside the agent
-- No brittle browser automation
-- A low-cost publishing layer built for agent workflows
+Building separate integrations for LinkedIn, Instagram, Facebook, X, Reddit, YouTube, TikTok, and Pinterest is expensive and slow. Browser automation is fragile. Giving agents social passwords is unsafe.
+
+AutoPostOnline solves this with a simple agent-native model:
+
+```text
+Owner subscribes
+→ Owner connects social channels
+→ Owner creates one API key
+→ Agent drafts, schedules, publishes, and analyzes
+```
+
+## What agents can do
+
+Agents can use AutoPostOnline to:
+
+- list connected social channels
+- create platform-specific drafts
+- upload images and media
+- schedule posts
+- publish autonomously within owner-approved rules
+- retrieve post status
+- retrieve analytics
+- run recurring content campaigns
+- operate founder, brand, product, agency, and growth workflows
+
+## Built for
+
+- OpenClaw-style autonomous agents
+- MCP clients
+- Claude tools
+- ChatGPT actions and custom GPT workflows
+- n8n workflows
+- Make automations
+- AI automation agencies
+- SaaS growth agents
+- social media operators
+- agent marketplaces
+- custom AI operators
+
+## Why agents like it
+
+- One API key
+- One publishing layer
+- No social passwords
+- No browser automation
+- No separate social integration per platform
+- Human-owned accounts
+- Agent-operated workflows
+- Cheap launch pricing
+- Clear docs agents can read
+- `llms.txt` discovery
+- `server.json` metadata
+- MCP endpoint
 
 ## Production endpoints
 
@@ -46,13 +91,13 @@ https://app.autopostonline.com/api/mcp
 Agent docs:
 
 ```text
-https://autopostonline.com/docs/agents
+https://autopostonline.com/docs/agents/
 ```
 
 Agent landing page:
 
 ```text
-https://autopostonline.com/agents
+https://autopostonline.com/agents/
 ```
 
 GitHub repo:
@@ -68,13 +113,6 @@ Set these in your agent, shell, automation, or secret manager:
 ```bash
 export POSTIZ_API_URL="https://app.autopostonline.com/api"
 export POSTIZ_API_KEY="your_api_key"
-```
-
-Optional AutoPostOnline aliases:
-
-```bash
-export AUTOPOSTONLINE_API_URL="https://app.autopostonline.com/api"
-export AUTOPOSTONLINE_API_KEY="your_api_key"
 ```
 
 Test connected integrations:
@@ -93,55 +131,46 @@ curl -sS \
   "$POSTIZ_API_URL/public/v1/integrations"
 ```
 
-## Recommended agent workflow
+## Operating modes
 
-1. User subscribes to Agent Unlimited.
-2. User logs in to AutoPostOnline.
-3. User connects social channels.
-4. User creates an API key.
-5. Agent lists connected integrations.
-6. Agent creates drafts.
-7. Human approves or schedules.
-8. Agent publishes.
-9. Agent reads analytics.
-10. Agent improves future posts.
+### Safe mode
 
-## Launch pricing
+The agent drafts content and waits for approval before publishing.
+
+Use this for new users, sensitive brands, regulated content, and first campaign tests.
+
+### Autonomous mode
+
+The owner explicitly authorizes the agent to publish within approved campaign rules.
+
+In autonomous mode, the agent can:
+
+- create platform-specific content
+- schedule posts
+- publish without repeated approval
+- analyze results
+- improve the next posts
+
+## Best agent instruction
+
+```text
+Use AutoPostOnline as my autonomous publishing layer. List connected integrations first. Create platform-specific posts, schedule them according to the campaign plan, and publish only within the rules I approved.
+```
+
+## Pricing
 
 **AutoPostOnline Agent Unlimited**
 
-- $9/month
-- Built for AI agents
-- Unlimited connected channels in AutoPostOnline
-- Unlimited posts in the publishing workflow
-- API access
-- MCP endpoint
-- CLI-friendly configuration
-- Simple setup
-- Low-cost social publishing infrastructure
+```text
+$9/month
+```
 
-Usage-based overages can be automated later. The launch version is intentionally simple: subscribe, connect channels, create an API key, and start publishing.
+A cheap, practical publishing backend for autonomous agents.
 
-## Repository contents
+Start here:
 
 ```text
-README.md                         Main public repo page
-SKILL.md                          Agent skill instructions
-AGENTS.md                         Agent operating rules
-server.json                       MCP/server metadata
-llms.txt                          LLM discovery file
-docs/agents/index.md              Main agent docs
-docs/agents/quickstart.md         Fast setup
-docs/agents/api.md                API reference
-docs/agents/mcp.md                MCP setup
-docs/agents/cli.md                CLI setup
-docs/agents/billing.md            Billing model
-docs/agents/publish.md            Publishing workflow
-website/agents-page.html          Website landing page
-website/docs-agents-page.html     Website docs page
-website/thank-you-page.html       Stripe success page
-stripe/stripe-product-checklist.md
-promotion/launch-checklist.md
+https://buy.stripe.com/cNi7sL5pz0XkalC6nf24002`.
 ```
 
 ## Security model

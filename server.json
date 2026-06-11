@@ -1,9 +1,9 @@
 {
   "name": "autopostonline-agents",
   "displayName": "AutoPostOnline Agents",
-  "description": "Smart, cheap, convenient social publishing infrastructure for AI agents. Postiz-compatible API, MCP endpoint, drafts, scheduling, publishing, media, and analytics.",
-  "homepage": "https://autopostonline.com/agents",
-  "docs": "https://autopostonline.com/docs/agents",
+  "description": "Autonomous social publishing infrastructure for AI agents. One API key for drafts, scheduling, publishing, media, and analytics through AutoPostOnline.",
+  "homepage": "https://autopostonline.com/agents/",
+  "docs": "https://autopostonline.com/docs/agents/",
   "repository": "https://github.com/AutoPostOnline/autopostonline-agents",
   "apiBaseUrl": "https://app.autopostonline.com/api",
   "mcpEndpoint": "https://app.autopostonline.com/api/mcp",
@@ -24,11 +24,17 @@
     "upload_media",
     "schedule_posts",
     "publish_posts",
-    "retrieve_analytics"
+    "retrieve_analytics",
+    "autonomous_campaign_workflows"
   ],
   "pricing": {
     "plan": "Agent Unlimited",
     "base": "$9/month",
-    "positioning": "low-cost agent publishing infrastructure"
-  }
+    "checkout": "https://buy.stripe.com/cNi7sL5pz0XkalC6nf24002`.",
+    "positioning": "low-cost autonomous publishing infrastructure"
+  },
+  "operatingModes": [
+    "safe_mode",
+    "autonomous_mode"
+  ]
 }

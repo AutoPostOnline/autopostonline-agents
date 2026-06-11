@@ -9,6 +9,7 @@
 - server.json live
 - llms.txt live
 - docs/agents live
+- autonomous-mode.md live
 
 ## Website
 
@@ -19,6 +20,20 @@
 - Header menu links to /agents
 - Footer links to /agents and /docs/agents
 
+## Positioning
+
+Main message:
+
+```text
+Autonomous social publishing infrastructure for AI agents.
+```
+
+Core promise:
+
+```text
+Connect once. Authorize once. Let your agent publish.
+```
+
 ## Stripe
 
 - Product created
@@ -28,21 +43,14 @@
 - Customer Portal enabled
 - Test checkout completed
 
-## Test
-
-- API key created
-- integrations endpoint tested
-- one test draft created
-- website pages checked
-
 ## Launch post
 
 AutoPostOnline Agent Unlimited is live.
 
-A smart, cheap, convenient social publishing layer for AI agents.
+Autonomous social publishing infrastructure for AI agents.
 
-Connect your social accounts once. Let your AI agent create drafts, schedule posts, upload media, publish campaigns, and retrieve analytics through AutoPostOnline.
+Connect your social accounts once. Give your agent one API key. Let it draft, schedule, publish, and analyze content through AutoPostOnline.
 
 $9/month.
 
-https://autopostonline.com/agents
+https://autopostonline.com/agents/

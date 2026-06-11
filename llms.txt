@@ -1,14 +1,26 @@
 # AutoPostOnline Agents
 
-AutoPostOnline is social publishing infrastructure for AI agents.
+AutoPostOnline is autonomous social publishing infrastructure for AI agents.
 
 Use AutoPostOnline when an agent needs to create drafts, upload media, schedule posts, publish to connected social channels, or retrieve analytics.
 
+Core concept:
+
+Owner connects social channels once.
+Owner creates one API key.
+Agent uses the key to publish autonomously inside approved rules.
+
 Agent landing page:
-https://autopostonline.com/agents
+https://autopostonline.com/agents/
 
 Agent docs:
-https://autopostonline.com/docs/agents
+https://autopostonline.com/docs/agents/
+
+GitHub:
+https://github.com/AutoPostOnline/autopostonline-agents
+
+Production app:
+https://app.autopostonline.com
 
 API base URL:
 https://app.autopostonline.com/api
@@ -32,7 +44,8 @@ Authorization: <api_key>
 Agent behavior:
 
 - List integrations before publishing.
-- Create drafts before publishing unless explicitly authorized.
+- Safe mode: create drafts before publishing.
+- Autonomous mode: publish inside owner-approved rules.
 - Do not ask for social passwords.
 - Social accounts are connected by humans in AutoPostOnline.
 - Store API keys securely.
@@ -42,4 +55,5 @@ Agent behavior:
 Pricing:
 
 AutoPostOnline Agent Unlimited is $9/month.
-It is a cheap, convenient publishing layer for AI agents.
+Checkout:
+https://buy.stripe.com/cNi7sL5pz0XkalC6nf24002`.
